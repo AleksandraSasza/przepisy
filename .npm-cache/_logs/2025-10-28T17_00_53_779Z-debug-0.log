@@ -1,0 +1,22 @@
+0 verbose cli /opt/homebrew/Cellar/node/23.5.0/bin/node /opt/homebrew/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v23.5.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/saszalysokon/dania/.npmrc
+5 silly config load:file:/Users/saszalysokon/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm exec shadcn@latest add button card dialog input label select badge toast --yes
+8 verbose argv "exec" "--cache" ".npm-cache" "--" "shadcn@latest" "add" "button" "card" "dialog" "input" "label" "select" "badge" "toast" "--yes"
+9 verbose logfile logs-max:10 dir:/Users/saszalysokon/dania/.npm-cache/_logs/2025-10-28T17_00_53_779Z-
+10 verbose logfile /Users/saszalysokon/dania/.npm-cache/_logs/2025-10-28T17_00_53_779Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 http fetch GET 200 https://registry.npmjs.org/shadcn 150ms (cache revalidated)
+14 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+15 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+16 verbose cwd /Users/saszalysokon/dania
+17 verbose os Darwin 23.6.0
+18 verbose node v23.5.0
+19 verbose npm  v10.9.2
+20 verbose exit 1
+21 verbose code 1
