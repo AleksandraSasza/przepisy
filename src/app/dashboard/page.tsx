@@ -195,7 +195,6 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="text-center">
           <h1 className="text-3xl font-bold">Moje Przepisy</h1>
-          <p className="text-gray-600">{user.email}</p>
         </div>
 
         {/* Filters - Nowa wersja z dialogami */}

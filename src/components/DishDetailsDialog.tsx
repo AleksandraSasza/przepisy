@@ -7,7 +7,7 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Badge } from './ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Plus, Trash2, Edit2, ExternalLink, Heart } from 'lucide-react';
+import { Plus, Trash2, Edit2, ExternalLink } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { toast } from 'sonner';
 import type { Product, Tag, DishWithIngredients } from '@/types/database';
@@ -378,37 +378,8 @@ export function DishDetailsDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="flex items-center justify-between gap-2">
-            <span className="flex-1">{isEditing ? 'Edytuj przepis' : dish.name}</span>
-            {!isEditing && (
-              <div className="flex items-center gap-2">
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8"
-                  onClick={() => dish && onToggleFavorite(dish.id, !dish.favorite)}
-                  aria-label={dish?.favorite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
-                >
-                  <Heart
-                    className={`h-5 w-5 transition-colors ${
-                      dish?.favorite
-                        ? 'fill-[#66323A] text-[#66323A]'
-                        : 'fill-none text-gray-400 hover:text-gray-600'
-                    }`}
-                  />
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setIsEditing(true)}
-                >
-                  <Edit2 className="h-4 w-4 mr-2" />
-                  Edytuj
-                </Button>
-              </div>
-            )}
+          <DialogTitle>
+            {isEditing ? 'Edytuj przepis' : dish.name}
           </DialogTitle>
           <DialogDescription>
             {isEditing ? 'Edytuj szczegóły przepisu' : 'Szczegóły przepisu'}
@@ -722,12 +693,22 @@ export function DishDetailsDialog({
                   type="button"
                   variant="outline"
                   size="sm"
+                  onClick={() => setIsEditing(true)}
+                  className="flex-1"
+                >
+                  <Edit2 className="h-4 w-4 mr-2" />
+                  Edytuj
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
                   className="text-red-600 hover:text-red-700 hover:bg-red-50"
                   onClick={handleDelete}
                   disabled={loading}
                 >
                   <Trash2 className="h-4 w-4 mr-2" />
-                  Usuń przepis
+                  Usuń
                 </Button>
                 <Button
                   type="button"
