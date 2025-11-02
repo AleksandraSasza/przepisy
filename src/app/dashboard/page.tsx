@@ -7,7 +7,7 @@ import { Plus, Tags, Package, User } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useDishes } from '@/features/dishes/hooks/useDishes';
 import { useDishFilters } from '@/features/dishes/hooks/useDishFilters';
-import { DishFilters } from '@/features/dishes/components/DishFilters';
+import { MobileFriendlyFilters } from '@/features/dishes/components/MobileFriendlyFilters';
 import { DishList } from '@/features/dishes/components/DishList';
 import { AddDishDialog } from '@/components/AddDishDialog';
 import { DishDetailsDialog } from '@/components/DishDetailsDialog';
@@ -193,15 +193,13 @@ export default function DashboardPage() {
 
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold">Moje Przepisy</h1>
-            <p className="text-gray-600">{user.email}</p>
-          </div>
+        <div className="text-center">
+          <h1 className="text-3xl font-bold">Moje Przepisy</h1>
+          <p className="text-gray-600">{user.email}</p>
         </div>
 
-        {/* Filters */}
-        <DishFilters
+        {/* Filters - Nowa wersja z dialogami */}
+        <MobileFriendlyFilters
           products={products}
           tags={tags}
           selectedProducts={selectedProducts}
