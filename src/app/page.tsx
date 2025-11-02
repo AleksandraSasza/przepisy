@@ -99,18 +99,18 @@ export default function Home() {
             </div>
           )}
 
-          <div className="flex gap-3">
+          <div className="space-y-3">
             <button
               onClick={handleSignIn}
               disabled={loading}
-              className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+              className="w-full bg-[#66323A] text-white py-2 px-4 rounded-md hover:bg-[#66323A]/90 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-medium"
             >
               {loading ? 'Ładowanie...' : 'Zaloguj'}
             </button>
             <button
               onClick={handleSignUp}
               disabled={loading}
-              className="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+              className="w-full text-[#66323A] py-2 px-4 disabled:text-gray-400 disabled:cursor-not-allowed transition-colors font-medium underline"
             >
               {loading ? 'Ładowanie...' : 'Załóż konto'}
             </button>
